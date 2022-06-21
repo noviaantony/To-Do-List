@@ -1,15 +1,4 @@
-<html>
-<head>
-  <title>Novia's To-Do List</title>
-</head>
-<body>
-  <input id="todo-title" type="text" />
-  <input id="date-picker" type="date" />
-  <button onclick="addToDo()">Add To Do</button>
 
-  <div id = "mytodolist"></div>
-
-  <script>
     // ========== START MODEL SECTION =================================================================================
 
     // if local storage has a todos array use it, else : use default array
@@ -63,6 +52,7 @@
     // this should run whenever our todos change
     function saveToDo() {
       localStorage.setItem('todos', JSON.stringify(todos)); // !
+      
     }
 
     // ========== END MODEL SECTION =================================================================================
@@ -74,12 +64,15 @@
       document.getElementById('mytodolist').innerHTML = '';
 
       todos.forEach(function(todo) {
-        const element = document.createElement('div'); 
+        const element = document.createElement('li'); 
+        element.className = 'todo-item'
         element.innerText = todo.title + ' ' + todo.dueDate;
 
         const deleteButton = document.createElement('button');
-        deleteButton.innerText = 'Delete';
-        deleteButton.style = "margin-left: 12px";
+        // deleteButton.className = "delete-btn"
+        deleteButton.className = "delete-btn"
+        deleteButton.innerHTML = '<i class="fa fa-trash"></i>';
+        deleteButton.style = "margin-left: 263px";
         deleteButton.onclick = deleteToDo; // not deleteToDo() !
         deleteButton.id = todo.id;
         element.appendChild(deleteButton);
@@ -119,11 +112,3 @@
 
 
     // ========== END CONTROLLER SECTION =================================================================================
-
-
-    
-
-    
-  </script>
-</body>
-</html>

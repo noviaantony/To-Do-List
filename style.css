@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins';
+  background: linear-gradient( 64.5deg,  rgba(245,116,185,1) 14.7%, rgba(89,97,223,1) 88.7% );
+}
+
+.wrapper {
+  margin: 120px auto;
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  border-radius: 7px;
+  padding: 25px;
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper .inputField {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.inputField input {
+  width: 85%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+
+.inputField button {
+  width: 20%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: lightgray;
+  color: whitesmoke;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  transition: background 0.15s;
+}
+
+.inputField button:hover {
+  background:  darkgray;
+  color: whitesmoke;
+}
+
+.inputField button:active {
+  background: gray;
+  color: whitesmoke;
+}
+
+/* .wrapper .toDoList {} */
+
+.toDoList {
+  padding: 0; 
+  margin: 0;
+}
+
+.todo-item{
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  margin-left: 0;
+  padding: 0 15px;
+
+}
+
+.todo-item button{
+  position: absolute;
+  right: 0px;
+  width: 45px;
+  text-align: center;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  border: none;
+  height: 45px;
+}
+
+.todo-item button:hover{
+  background: maroon
+
+}
